@@ -1,0 +1,94 @@
+/* Activity 3: Responsive Design - styles.css */
+
+:root{
+  --cream:#fff8f3;--blush:#fde8ee;--pink:#f6c3d2;--rose:#e58fa8;--deep:#8a3b55;--ink:#5a2a3c;--mute:#a1667b;
+  --bow:url("https://uploads.onecompiler.io/452whndub/454y2mvqp/Untitled%20design.svg");
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Quicksand,"Segoe UI",sans-serif;overflow-x:hidden;
+  background:var(--cream)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+img{max-width:100%;height:auto;display:block}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+
+.bow{display:inline-block;width:46px;height:46px;background:var(--bow) center/contain no-repeat}
+
+/* Header + nav */
+.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0;flex-wrap:wrap;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Pinyon Script",cursive;font-size:1.6rem;color:var(--deep)}
+nav{display:flex;flex-wrap:wrap;gap:8px 22px}
+nav a{color:var(--deep);text-decoration:none;font-weight:700}
+nav a:hover{color:var(--rose);text-decoration:underline wavy}
+
+/* Hero */
+.hero{text-align:center;padding:70px 20px 80px;border:3px solid var(--rose);border-radius:28px;
+  background:linear-gradient(180deg,#ffe3ec,#fbd0de 60%,#f6bfd1);box-shadow:0 8px 24px rgba(229,143,168,.25)}
+.hero .bow{width:100px;height:100px;margin-bottom:4px}
+.hero h1{margin:0 0 12px;font-family:"Pinyon Script",cursive;font-weight:400;font-size:clamp(2.6rem,9vw,5rem);line-height:1.05;color:var(--deep)}
+.subtitle{max-width:46ch;margin:0 auto 18px;font-size:1.1rem;line-height:1.6}
+.screen-badge{display:inline-block;margin:0 0 24px;padding:8px 18px;border-radius:999px;background:#fff;border:2px solid var(--rose);color:var(--deep);font-weight:700;font-size:.95rem}
+.screen-badge span{display:none}
+.label-desktop{display:inline}
+.btn{display:inline-block;padding:12px 28px;border-radius:999px;background:var(--rose);color:#fff;font-weight:700;text-decoration:none;
+  border:2px solid #fff;box-shadow:0 0 0 2px var(--rose);font-size:1rem}
+.btn:hover{background:#d9708f}
+
+h2{text-align:center;margin:56px 0 24px;font-family:"Cormorant Garamond",serif;font-size:2rem;color:var(--deep)}
+h2::before,h2::after{content:"\2661";color:var(--rose);margin:0 12px;font-size:1.2rem}
+
+/* Cards: 3 columns on desktop */
+.cards{display:grid;gap:24px;grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;border:2px solid var(--pink);border-radius:22px;padding:22px 20px;text-align:center;
+  box-shadow:0 0 0 5px var(--blush),0 8px 18px rgba(229,143,168,.2)}
+.card h3{margin:0 0 10px;font-family:"Cormorant Garamond",serif;font-size:1.4rem;color:var(--deep)}
+.card p{margin:0;line-height:1.6}
+
+/* Gallery: 3 columns, images keep their proportions */
+.gallery{display:grid;gap:24px;grid-template-columns:repeat(3,1fr)}
+.gallery figure{margin:0;background:#fff;border:2px solid var(--pink);border-radius:18px;padding:10px;
+  box-shadow:0 0 0 5px var(--blush)}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
+.gallery figcaption{padding:10px 4px 4px;text-align:center;font-weight:700;color:var(--deep)}
+
+/* Techniques: two columns on desktop */
+.split{display:flex;align-items:center;gap:32px}
+.split > *{flex:1 1 0;min-width:0}
+.about{margin:0;line-height:1.7;text-align:left}
+.list{list-style:none;margin:0;padding:6px 22px;background:#fff;border:2px solid var(--rose);border-radius:20px}
+.list li{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1.5px dashed var(--pink)}
+.list li:last-child{border:0}
+.list span{color:var(--mute);text-align:right}
+
+/* Footer */
+footer{text-align:center;margin:56px 0 30px;color:var(--mute)}
+.footer-script{margin:0 0 6px;font-family:"Pinyon Script",cursive;font-size:1.5rem}
+.footer-info{margin:0;font-size:.95rem;font-weight:600}
+
+/* Tablet */
+@media (max-width:900px){
+  .hero{padding:56px 18px 64px}
+  .cards,.gallery{grid-template-columns:repeat(2,1fr)}
+  .label-desktop{display:none}
+  .label-tablet{display:inline}
+}
+
+/* Mobile */
+@media (max-width:600px){
+  .wrap{padding:0 14px}
+  .top{justify-content:center;text-align:center}
+  .logo{font-size:1.35rem}
+  nav{width:100%;justify-content:center;gap:6px 16px}
+  .hero{padding:44px 16px 52px;border-radius:22px}
+  .hero .bow{width:80px;height:80px}
+  h2{font-size:1.6rem;margin:44px 0 20px}
+  .cards,.gallery{grid-template-columns:1fr}
+  .split{flex-direction:column;align-items:stretch;gap:20px}
+  .about{text-align:center}
+  .list li{flex-direction:column;gap:4px}
+  .list span{text-align:left}
+  .label-tablet{display:none}
+  .label-mobile{display:inline}
+}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

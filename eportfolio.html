@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Keisha Trinidad's student e-portfolio: profile, skills, projects, activities, achievements, and journey.">
+  <title>Keisha Trinidad | E-Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1f3552;--blue:#4a7fb5;--text:#4f6580;--pale:#dbe9f8;--panel:#f0f7ff;--line:#b9d0ea}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;padding:0 20px;background:var(--pale) url("https://uploads.onecompiler.io/452whndub/454yfcu8c/6f3dc741c8353a6dd6ff5e72eb358d0e.jpg") center/cover fixed;color:var(--navy);font:16px/1.7 "DM Sans","Segoe UI",sans-serif}
+    h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.2}
+    a{color:inherit;text-decoration:none}
+    img{width:100%;display:block;object-fit:cover}
+    header{position:sticky;top:0;z-index:10;margin:0 -20px;background:rgba(219,233,248,.96);border-bottom:1px solid var(--line)}
+    nav{max-width:1150px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font:600 22px "Playfair Display",serif;color:var(--blue);white-space:nowrap}
+    nav ul{display:flex;justify-content:center;gap:8px 18px;flex-wrap:wrap;list-style:none;margin:0;padding:0}
+    nav a{font-size:13px;color:#4a6078}nav a:hover,nav a.current{color:var(--blue);font-weight:700}
+    main{max-width:1150px;margin:auto}
+    .page{min-height:70vh;margin:28px auto;padding:70px 6%;background:rgba(240,247,255,.96);border-radius:26px;box-shadow:0 10px 40px rgba(31,53,82,.16)}
+    .hero{min-height:calc(100vh - 100px);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:60px}
+    .small-title,.section-title p,.label{color:var(--blue);text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:700}
+    .hero h1{font-size:clamp(50px,7vw,82px);line-height:1;margin:12px 0;color:var(--navy)}
+    .hero h1 span{color:var(--blue)}.hero h2{font:500 25px "DM Sans",sans-serif;margin-bottom:20px}
+    .hero-text>p:not(.small-title),.about-text p,.achievement p:not(.label),.contact-info>p:not(.email){color:var(--text)}
+    .hero-text>p:not(.small-title){max-width:550px;margin-bottom:28px}
+    .hero-image{position:relative}.hero-image:before{content:"♡";position:absolute;top:-35px;right:-15px;color:#7aa7d6;font-size:45px;z-index:1}
+    .hero-image img{height:480px;border-radius:180px 180px 25px 25px;box-shadow:16px 16px 0 #a9c8ea;object-position:center 68%}
+    .button,button{display:inline-block;border:0;background:var(--blue);color:white;padding:12px 23px;border-radius:30px;font:600 14px "DM Sans",sans-serif;cursor:pointer;transition:.2s}
+    .button:hover,button:hover{background:#355f8e;transform:translateY(-2px)}
+    .section-title{margin-bottom:38px}.section-title h2{font-size:42px;margin:4px 0}
+    .pink-section{background:rgba(219,233,248,.96)}
+    .about-container,.achievement,.contact-container{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+    .about-container img{height:400px;border-radius:24px;box-shadow:14px 14px 0 #a9c8ea;object-position:center 68%}
+    .about-text h3,.contact-info h3{font-size:30px;margin:0 0 16px}.about-text p{margin:0 0 14px}
+    .mini-note,.quote{display:inline-block;margin-top:10px;padding:10px 18px;background:#fff;border:1px solid #c8dbef;border-radius:24px;color:var(--blue)}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .skill-card,.project-card,.activity-card{background:#fff;border:1px solid #cfdff0;border-radius:20px;transition:.2s}
+    .skill-card{padding:24px}.skill-card:hover,.project-card:hover,.activity-card:hover{transform:translateY(-5px);box-shadow:0 12px 26px rgba(40,80,130,.12)}
+    .skill-card span{font-size:24px;color:var(--blue)}.skill-card h3{font-size:21px;margin:8px 0}.skill-card p,.activity-card p,.card-content p:not(.label){font-size:14px;color:var(--text);margin:0}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}.project-card{overflow:hidden}.project-card img{height:260px}.card-content{padding:22px}.card-content h3{font-size:24px;margin:6px 0 10px}
+    .activity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.activity-card{padding:22px}.activity-card h3{margin:0 0 8px}
+    .achievement{grid-template-columns:.8fr 1.2fr}.achievement img{height:380px;border-radius:24px}.achievement h3{font-size:34px;margin:8px 0 14px}.quote{margin-top:20px}
+    .journey-section{max-width:900px}.timeline{border-left:2px solid #b5cfe8;margin-left:14px;padding-left:32px}.timeline-item{position:relative;margin-bottom:32px}.timeline-item:last-child{margin-bottom:0}.dot{position:absolute;width:14px;height:14px;background:var(--blue);border:4px solid var(--panel);border-radius:50%;left:-40px;top:5px}.timeline-item span{font-size:11px;letter-spacing:2px;color:var(--blue);font-weight:700}.timeline-item h3{font-size:23px;margin:4px 0}.timeline-item p{margin:0;color:var(--text)}
+    .contact-container{grid-template-columns:1fr 1fr}.contact-info h3{font-size:30px}.email{margin-top:18px;color:var(--blue);font-weight:700;overflow-wrap:anywhere}
+    form{display:flex;flex-direction:column;gap:13px}input,textarea{width:100%;padding:13px 16px;border:1px solid #c8dbef;border-radius:13px;background:white;font:inherit}input:focus,textarea:focus{outline:2px solid var(--blue);outline-offset:1px}textarea{resize:vertical}form button{align-self:flex-start}
+    footer{text-align:center;padding:24px 12px;color:#f0f7ff;background:var(--navy);font-size:12px;margin:28px -20px 0}footer p{margin:3px}footer p:first-child{color:#a9c8ea}
+    :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+    @media(max-width:850px){nav{flex-direction:column;gap:10px}.hero,.about-container,.achievement,.contact-container{grid-template-columns:1fr}.hero{text-align:center;gap:36px}.hero-text>p:not(.small-title){margin-left:auto;margin-right:auto}.hero-image{max-width:460px;width:100%;margin:auto}.about-container img{max-width:450px;margin:auto}.skills-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:550px){body{padding:0 12px}.page{padding:46px 22px;margin:16px auto;border-radius:20px}.hero{min-height:auto;padding-top:60px;padding-bottom:50px}.hero-image img{height:360px}.section-title h2{font-size:34px}.skills-grid,.project-grid,.activity-grid{grid-template-columns:1fr}.project-card img{height:220px}.about-container img,.achievement img{height:320px}.timeline{padding-left:25px}.dot{left:-33px}header{margin:0 -12px}nav{padding:12px}.logo{font-size:20px}nav ul{gap:7px 12px}footer{margin-left:-12px;margin-right:-12px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a class="logo" href="#home">kae's e-portfolio ♡</a>
+      <ul>
+        <li><a href="#home">home</a></li><li><a href="#about">about me</a></li><li><a href="#skills">skills</a></li><li><a href="#projects">projects</a></li><li><a href="#activities">activities</a></li><li><a href="#achievements">achievements</a></li><li><a href="#journey">journey</a></li><li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="page hero">
+      <div class="hero-text"><p class="small-title">welcome to my e-portfolio ✿</p><h1>Hi, I'm <span>Keisha!</span></h1><p>A BS Marketing student that's exploring experiences and lessons that continue to shape me.</p><a href="#about" class="button">get to know me ♡</a></div>
+      <div class="hero-image"><img src="https://uploads.onecompiler.io/452whndub/454yfcu8c/IMG_0859.jpeg" alt="Keisha's photo"></div>
+    </section>
+    <section id="about" class="page">
+      <div class="section-title"><p>01 · a little about me</p><h2>About me ♡</h2></div>
+      <div class="about-container"><img src="https://uploads.onecompiler.io/452whndub/454yfcu8c/IMG_0859.jpeg" alt="Keisha's photo"><div class="about-text"><h3>Hello, I'm Keisha Trinidad! You can call me Kae :)</h3><p>I chose Marketing because it felt like a practical path for me, and along the way, I learned to genuinely love the course I chose.</p><p>Outside academics, I enjoy listening to music, documenting my surroundings, going to the beach, spending time in cafes, and going on trips with friends.</p><p>One of the biggest things I have learned about myself is independence. I continue to grow by making my own choices, experiencing new things, and becoming more confident in who I am.</p><div class="mini-note">♡ future goal: aim bigger and excel</div></div></div>
+    </section>
+    <section id="skills" class="page pink-section">
+      <div class="section-title"><p>02 · things i bring with me</p><h2>My skills ✧</h2></div>
+      <div class="skills-grid">
+        <article class="skill-card"><span>♡</span><h3>Adaptability</h3><p>Learning to adjust to different situations and environments.</p></article>
+        <article class="skill-card"><span>✿</span><h3>Organization</h3><p>Keeping tasks, ideas, and responsibilities organized.</p></article>
+        <article class="skill-card"><span>♡</span><h3>Teamwork</h3><p>Working with others and contributing to group goals.</p></article>
+        <article class="skill-card"><span>✧</span><h3>Attention to Detail</h3><p>Being mindful of small details when completing tasks.</p></article>
+        <article class="skill-card"><span>♡</span><h3>Writing</h3><p>Expressing ideas clearly through written work.</p></article>
+        <article class="skill-card"><span>✿</span><h3>Public Speaking</h3><p>A skill I am continuously working on and improving.</p></article>
+      </div>
+    </section>
+    <section id="projects" class="page">
+      <div class="section-title"><p>03 · things i've worked on</p><h2>Projects ✧</h2></div>
+      <div class="project-grid">
+        <article class="project-card"><img src="https://uploads.onecompiler.io/452whndub/452wnm8tv/8b39231b0e1a6c4a84f6e467ea799608.jpeg" alt="Entrepreneurship project"><div class="card-content"><p class="label">SHS · ENTREPRENEURSHIP</p><h3>Entrepreneurship Project</h3><p>One of my senior high school projects, where I experienced an entrepreneurial activity and learned more about teamwork, planning, and responsibility.</p></div></article>
+        <article class="project-card"><img src="https://uploads.onecompiler.io/452whndub/452wnm8tv/IMG_2674.jpeg" alt="Jollibee research project"><div class="card-content"><p class="label">SHS · RESEARCH</p><h3>Jollibee Research</h3><p>A research project focused on factors that influence customers' decision to purchase Jollibee Chickenjoy.</p></div></article>
+      </div>
+    </section>
+    <section id="activities" class="page pink-section">
+      <div class="section-title"><p>04 · memories & experiences</p><h2>Activities & Events ♡</h2></div>
+      <div class="activity-grid"><article class="activity-card"><h3>Work Immersion</h3><p>A memorable part of my school experience, where I got to see various activities from different college programs.</p></article><article class="activity-card"><h3>ABM Seminars</h3><p>Learning experiences that helped me explore my strand.</p></article><article class="activity-card"><h3>Class Activities</h3><p>Group projects, research, and experiences with classmates.</p></article></div>
+    </section>
+    <section id="achievements" class="page">
+      <div class="section-title"><p>05 · something i'm proud of</p><h2>Achievement ♡</h2></div>
+      <div class="achievement"><img src="https://uploads.onecompiler.io/452whndub/452wnm8tv/IMG_7918.jpeg" alt="Senior high school graduation"><div><p class="label">SENIOR HIGH SCHOOL</p><h3>Graduating SHS</h3><p>Graduating senior high school became one of my most meaningful achievements. There was a time when I thought I would not make it this far, which made reaching graduation even more special.</p><div class="quote">I made it this far. ♡</div></div></div>
+    </section>
+    <section id="journey" class="page journey-section">
+      <div class="section-title"><p>06 · where i've been & where i'm going</p><h2>my journey ✿</h2></div>
+      <div class="timeline">
+        <article class="timeline-item"><div class="dot"></div><span>SHS TO COLLEGE</span><h3>Learning who stays</h3><p>I learned that not everyone will always be there for you, which made me appreciate the people who genuinely stayed.</p></article>
+        <article class="timeline-item"><div class="dot"></div><h3>Realizing I made it</h3><p>Graduation became a reminder of how far I had already come and everything I had overcome.</p></article>
+        <article class="timeline-item"><div class="dot"></div><h3>A new chapter</h3><p>College has started with new classes, new experiences, and another opportunity to grow.</p></article>
+        <article class="timeline-item"><div class="dot"></div><h3>Choosing independence</h3><p>I continue to become more independent and comfortable with making choices for myself.</p></article>
+        <article class="timeline-item"><div class="dot"></div><h3>Becoming</h3><p>My goal is to graduate, aim bigger, excel, and continue becoming the person I want to be.</p></article>
+      </div>
+    </section>
+    <section id="contact" class="page pink-section">
+      <div class="section-title"><p>07 · let's connect</p><h2>contact me ♡</h2></div>
+      <div class="contact-container"><div class="contact-info"><h3>let's keep in touch ✧</h3><p>If you'd like to connect with me, you can reach me through my email.</p><p class="email">✉ <a href="mailto:keisha3nidad@gmail.com">keisha3nidad@gmail.com</a></p></div>
+        <form action="mailto:keisha3nidad@gmail.com" method="post" enctype="text/plain"><input type="text" name="name" placeholder="your name" aria-label="Your name" required><input type="email" name="email" placeholder="your email" aria-label="Your email" required><textarea name="message" rows="5" placeholder="your message" aria-label="Your message"></textarea><button type="submit">send message ♡</button></form>
+      </div>
+    </section>
+  </main>
+  <footer><p>made with ♡ by keisha trinidad</p><p>© 2026 · student e-portfolio</p></footer>
+  <script>
+    const sectionLinks = document.querySelectorAll('nav a[href^="#"]');
+    sectionLinks.forEach(link => link.addEventListener('click', () => {
+      sectionLinks.forEach(item => item.classList.remove('current'));
+      link.classList.add('current');
+    }));
+  </script>
+</body>
+</html>

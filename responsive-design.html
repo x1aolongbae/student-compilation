@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Activity 3: a responsive webpage that adapts to mobile, tablet, and desktop screens.">
+  <title>Responsive Design | Activity 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:wght@500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="responsive-design.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top" id="home">
+    <div class="logo">
+      <span class="bow" aria-hidden="true"></span>
+      <span>Responsive Design</span>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#layout">Layout</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#techniques">Techniques</a>
+      <a href="index.html">Back to Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <span class="bow" aria-hidden="true"></span>
+      <h1 id="hero-title">Responsive Design</h1>
+      <p class="subtitle">Activity 3: a webpage that adapts to mobile, tablet, and desktop screens.</p>
+      <a class="btn" href="#layout">See the layout</a>
+    </section>
+
+    <section id="layout" aria-labelledby="layout-title">
+      <h2 id="layout-title">Layout by Screen Size</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Desktop</h3>
+          <p>Cards sit in three columns and the navigation runs in one row across the top.</p>
+        </article>
+        <article class="card">
+          <h3>Tablet</h3>
+          <p>Cards drop to two columns and the spacing tightens so nothing feels cramped.</p>
+        </article>
+        <article class="card">
+          <h3>Mobile</h3>
+          <p>Cards stack in one column and the navigation wraps into centered, tappable links.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Resizing Images</h2>
+      <div class="gallery">
+        <figure>
+          <img src="https://uploads.onecompiler.io/452whndub/454y2mvqp/IMG_7064.JPG" alt="Screenshot of the Personal Portfolio activity">
+          <figcaption>Personal Portfolio</figcaption>
+        </figure>
+        <figure>
+          <img src="https://uploads.onecompiler.io/452whndub/454y2mvqp/IMG_6637.JPG" alt="Screenshot of the Marketplace activity">
+          <figcaption>Marketplace</figcaption>
+        </figure>
+        <figure>
+          <img src="https://uploads.onecompiler.io/452whndub/454y2mvqp/LAST%20PIC.JPG" alt="Screenshot of the Responsive Design activity">
+          <figcaption>Responsive Design</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="techniques" aria-labelledby="tech-title">
+      <h2 id="tech-title">Techniques Used</h2>
+      <div class="split">
+        <p class="about">For this activity, I built the page with a flexible layout instead of fixed widths, so the text stays readable and nothing scrolls sideways on any screen.</p>
+        <ul class="list">
+          <li><strong>CSS Grid</strong><span>Card and gallery columns</span></li>
+          <li><strong>Flexbox</strong><span>Header, navigation, split section</span></li>
+          <li><strong>Media queries</strong><span>600px and 900px breakpoints</span></li>
+          <li><strong>Fluid images</strong><span>max-width and aspect-ratio</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-script">made with love by Kae</p>
+    <p class="footer-info">Keisha Trinidad &bull; BS Marketing &bull; ETY131 &bull; A.Y. 2026&ndash;2027</p>
+  </footer>
+
+</div>
+</body>
+</html>
